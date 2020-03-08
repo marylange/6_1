@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Cadastro de currículo</title>
   </head>
 
@@ -14,32 +15,77 @@
       <h1>Cadastro de currículo</h1>
     </header>
     <article>
-      <form action="" enctype="multipart/form-data"></form>
-      <fieldset>
+      <form action="" enctype="multipart/form-data">
         <section>
           <label for="nome-usuario">Nome:
             <input type="text" id="nome-usuario" maxlength="40" requerid="required">
           </label>
+        </section>
+
+        <section>
           <label for="email-usuario">E-mail:
             <input type="email" id="email-usuario" maxlength="50" requerid="required">
           </label>
+        </section>
+
+        <section>
           <label for="cpf-usuario">CPF:
             <input type="number" id="cpf-usuario" maxlength="11" requerid="required">
           </label>
+        </section>
+
+        <section>
           <label for="endereco-usuario">Endereço:
             <input type="text" id="endereco-usuario" maxlength="200" required="required">
           </label>
+        </section>
+
+        <section>
           <label for="endereco-usuario">Cidade:
             <input type="text" id="endereco-usuario" maxlength="28" required="required">
           </label>
-          <label for="estado">Estado:
-            <select id="estado">
+        </section>
 
-            </select>
+        <section>
+          <label for="estado">Estado:
+            <select id="estado"></select>
           </label>
-          </select>
-      </fieldset>
+        </section>
+
+        <section>
+          <p>Tipo:</p>
+          <label for="casa"><input type="radio" class="1" id="casa" name="moradia" value="casa"
+              required="required">Casa</label>
+          <label for="apart"><input type="radio" class="2" id="apart" name="moradia" value="apart">Apartamento</label>
+        </section>
+        <fieldset>
+          <legend>Último emprego: </legend>
+          <label>Resumo do currículo: </label>
+          <textarea id="rascunho-curriculo" cols="100" rows="20" maxlength="1000" required="required"
+            placeholder="Digite o resumo aqui"></textarea>
+
+          <section>
+            <label for="cargo">Cargo:
+              <input type="text" id="cargo" maxlength="40" required="required">
+            </label>
+          </section>
+
+          <section>
+            <label for="descricao-cargo">Descrição do cargo:
+              <input type="text" id="descricao-cargo" maxlength="500" required="required">
+            </label>
+          </section>
+
+          <section>
+            <label for="data-inicio">Data de início:
+              <input type="date" id="data-inicio" required="required" min="1900-0-0" max="2020-12-31">
+            </label>
+          </section>
+        </fieldset>
+
+      </form>
     </article>
+    
   </body>
 
 </html>

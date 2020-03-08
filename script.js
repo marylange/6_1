@@ -9,3 +9,11 @@ window.onload = function addElemento() {
     estado.appendChild(newElemento);
   }
 }
+
+//Caso alguma das condições for inválida no momento do envio do
+//formulário, exibir mensagem de erro contextualizada.
+
+let inputElemento = document.getElementsByTagName("input");
+function pararEventos(evento) {
+  evento.preventDefault(inputElemento);
+}
